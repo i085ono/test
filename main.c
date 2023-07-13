@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h> //実行するにはincludeする必要があるから。
 
 int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
 {
   int y;
-  if( x <= 0 ){
+  if( x < 0 ){　//x <= 0だとxが0の場合も含まれてしまうから。
     exit(1);
   }
   y = sqrt(x);
@@ -13,7 +15,8 @@ int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないと�
 int main(void)
 {
   int i;
-  double *x = (double *)malloc(sizeof(double) * 100);
+  i = 0; //iの初期値を宣言していないから。
+  double *x = (double *)malloc(sizeof(double) * 101); //配列の要素が101個あるから。
 
   while( i <= 100 ){
     x[i] = myRoot((double)i);
