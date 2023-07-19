@@ -1,8 +1,8 @@
 #!/usr/bin/php
 <?php 
   foreach(file('/usr/share/dict/words') as $line){
-    // strpos() 関数を使って、文字列 "abc" が含まれる単語を echo "$line"; で表示しなさい。
-   if (strpos($line, "abc") !== false) {  //falseでない場合
+    // strpos() 関数を使って、文字列 "xy" が含まれる単語を echo "$line"; で表示しなさい。
+   if (strpos($line, "xy") !== false) {  //falseでない場合
         echo $line;　//lineを表示させる。
     }
 }
